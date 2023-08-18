@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <title>Dustbowl Farmer</title>
+</head>
+
+<body>
+
+  <header class="container-fluid">
+    <section class="row">
+      <div class="col-12 text-center">
+        <h1 class="title">Dustbowl Farmer</h1>
+      </div>
+    </section>
+  </header>
+  <main class="container-fluid">
+    <section class="row text-center">
+      <div class="col-4">
+        <div class="store-title">
+          <h2><i class="mdi mdi-home"></i> Go to Town</h2>
+        </div>
+        <section class="row justify-content-center p-2" id="store">
+          <div class="col-3 unpurchased-upgrades" onclick="buyUpgrade('broken rake')" id="brokenRake">
+            <h3>Broken Rake</h3>
+            <p id="rakePrice">Price Upgrade 1: 1000</p>
+            <button class="btn btn-primary">Buy Broken Rake</button>
+          </div>
+          <div class="col-3 unpurchased-upgrades" onclick="buyUpgrade('rusty shovel')" id="rustyShovel">
+            <h3>Rusty Shovel</h3>
+            <p id="rustyShovelPrice">Price Upgrade 2: 0</p>
+            <button class="btn btn-primary">Buy Rusty Shovel</button>
+          </div>
+          <div class="col-3 unpurchased-upgrades" onclick="buyUpgrade('birth child')" id="birthChild">
+            <h3>Birth Child</h3>
+            <p id="birthChildPrice">Automatic Upgrade 1 Price: 0</p>
+            <button class="btn btn-primary">Birth Child</button>
+          </div>
+          <div class="col-3 unpurchased-upgrades" onclick="buyUpgrade('old donkey')" id="oldDonkey">
+            <h3>Old Donkey</h3>
+            <p id="oldDonkeyPrice">Automatic Upgrade 2 Price: 0</p>
+            <button class="btn btn-primary">Buy Old Donkey</button>
+          </div>
+          <div class="col-3 unpurchased-upgrades" onclick="grabDrink('birth child')" id="grabDrink">
+            <h3>Buy Drink</h3>
+            <p id="oldDonkeyPrice">Automatic Upgrade 2 Price: 0</p>
+            <button class="btn btn-primary">Buy Old Donkey</button>
+          </div>
+        </section>
+      </div>
+      <div class="col-4 dirtpile">
+        <img src="https://img1.picmix.com/output/stamp/normal/3/0/8/9/1519803_598cd.gif" alt="Dirt Pile"
+          onclick="mine()" alt="" srcset="">
+      </div>
+      <div class="col-4">
+        <section class="row text-center">
+          <div class="col-12">
+            <h2 id="dirtTotal">Dust: 0</h2>
+          </div>
+          <div class="col-12">
+            <h2 id="autoDust">Automatic Dust: +0</h2>
+          </div>
+          <div class="col-12">
+            <h2 id="clickTotal">Extra Dust Each Click: +0</h2>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="row text-center gui">
+      <div class="col-12">
+        <h3>The Shed</h3>
+      </div>
+      <div class="col-4 d-flex flex-wrap" id="userUpgrades">
+
+      </div>
+      <div class="col-4">Lifetime Dust</div>
+      <div class="col-4">Something</div>
+    </section>
+  </main>
+
+
+</body>
+<script src="app.js">
+
+</script>
+
+</html>

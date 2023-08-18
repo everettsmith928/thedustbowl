@@ -1,0 +1,39 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1539110981872-4b9369a067eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1490&q=80);
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+.title {
+  font-size: 4rem;
+  color: white;
+
+}
+
+.dirtpile {
+  min-height: 50vh;
+}
+
+.gui {
+  min-height: 30vh;
+  background-color: grey;
+  padding: 1em;
+  margin: 0px;
+}
+
+.unpurchased-upgrades {
+  border: 1px solid white;
+  transition: 1s;
+}
+
+.unpurchased-upgrades:hover {
+  background-color: rgb(49, 49, 49);
+  cursor: pointer;
+}
+
+.purchased-upgrades {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
