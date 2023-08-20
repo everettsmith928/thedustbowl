@@ -17,7 +17,6 @@ body {
 
 .gui {
   min-height: 30vh;
-  background-color: grey;
   padding: 1em;
   margin: 0px;
 }
@@ -33,7 +32,10 @@ body {
 }
 
 .purchased-upgrades {
-  height: 50px;
-  width: 50px;
-  background-color: red;
+
+  background-color: grey;
+  margin: .1rem;
+  padding: .5rem;
+  border-radius: 8px;
+  border: 1px solid black;
 }
