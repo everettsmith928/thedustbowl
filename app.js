@@ -162,14 +162,14 @@ function updateStore() {
   //console.log(storeElem.innerHTML)
   clickUpgrades.forEach(upgrade => {
     if (dustTotal < upgrade.price) { disabled = 'disabled' } else { disabled = '' }
-    str += `<button class="col-4 unpurchased-upgrades p-2" onclick="buyUpgrade('${upgrade.name}', 1)" ${disabled}>
+    str += `<button class="col-4 unpurchased-upgrades p-2" onclick="buyUpgrade('${upgrade.name}', 'click')" ${disabled}>
             <h3>${upgrade.name}</h3>
             <p>Price: ${upgrade.price}</p>            
           </button>`
   })
   automaticUpgrades.forEach(upgrade => {
     if (dustTotal < upgrade.price) { disabled = 'disabled' } else { disabled = '' }
-    str += `<button class="col-4 unpurchased-upgrades p-2" onclick="buyUpgrade('${upgrade.name}', 2)" ${disabled}>
+    str += `<button class="col-4 unpurchased-upgrades p-2" onclick="buyUpgrade('${upgrade.name}', 'auto')" ${disabled}>
             <h3>${upgrade.name}</h3>
             <p>Price: ${upgrade.price}</p>            
           </button>`
@@ -264,9 +264,9 @@ function growChild(boughtUpgrade) {
 }
 
 // refactored Buy Function
-function buyUpgrade(boughtUpgrade, x) {
+function buyUpgrade(boughtUpgrade, arrayType) {
   let upgrade
-  if (x == 1) {
+  if (arrayType == 'click') {
     upgrade = findUpgrade(boughtUpgrade)
   } else {
     upgrade = findAutoUpgrade(boughtUpgrade)
@@ -276,7 +276,7 @@ function buyUpgrade(boughtUpgrade, x) {
     upgrade.quantity++
     dustTotal -= upgrade.price
     upgrade.price = Math.ceil(upgrade.price * 1.05)
-    if (x == 2) {
+    if (arrayType == 'auto') {
       autoDust += upgrade.multiplier
     }
     updateUpgrades(boughtUpgrade)
